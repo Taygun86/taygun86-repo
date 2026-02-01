@@ -2,49 +2,39 @@
 
 This repository hosts personal RPM and DEB packages.
 
-## Updating the Repository (Developer)
+## Installation / Usage
 
-After adding new packages, run the following script to update the metadata files:
+### Debian / Ubuntu
+
+Run the following command to add the repository:
 
 ```bash
-./update_repo.sh
+echo "deb [trusted=yes] https://taygun86.github.io/taygun86-repo/deb ./" | sudo tee /etc/apt/sources.list.d/taygun86.list
+sudo apt update
 ```
 
-**Requirements:**
-- For RPM: `createrepo` (or `createrepo_c`)
-- For DEB: `dpkg-dev` (for `dpkg-scanpackages` command)
+**Install Package:**
+```bash
+sudo apt install zapret-gtk
+```
 
 ---
 
-## Usage (Client)
+### Fedora / RHEL
 
-Follow the steps below to add this repository to your system. (Note: If this repo is hosted online, replace the URL with your server address. You can use the `file://` protocol for local usage).
+Run the following command to add the repository:
 
-### Fedora / RHEL / CentOS (RPM)
-
-Create the file `/etc/yum.repos.d/taygun86.repo`:
-
-```ini
+```bash
+sudo tee /etc/yum.repos.d/taygun86.repo <<EOF
 [taygun86]
 name=Taygun86 Repository
 baseurl=https://taygun86.github.io/taygun86-repo/rpm
 enabled=1
 gpgcheck=0
-```
-*(Note: Replace the `baseurl` field with your repository's actual address. The address above assumes Github Pages is used.)*
-
-### Debian / Ubuntu (DEB)
-
-Create the file `/etc/apt/sources.list.d/taygun86.list`:
-
-```list
-deb [trusted=yes] https://taygun86.github.io/taygun86-repo/deb ./
+EOF
 ```
 
-*(Note: The `[trusted=yes]` flag is required to use repositories without GPG signatures.)*
-
-Then update the package list:
-
+**Install Package:**
 ```bash
-sudo apt update
+sudo dnf install zapret-gtk
 ```
