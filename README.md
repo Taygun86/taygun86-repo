@@ -38,3 +38,19 @@ EOF
 ```bash
 sudo dnf install zapret-gtk
 ```
+
+---
+
+### openSUSE (Leap / Tumbleweed)
+
+Run the following command to add the repository:
+
+```bash
+sudo zypper addrepo --no-gpgcheck https://taygun86.github.io/taygun86-repo/rpm taygun86
+sudo zypper refresh
+```
+
+**Install Package:**
+```bash
+sudo zypper install zapret-gtk
+```
