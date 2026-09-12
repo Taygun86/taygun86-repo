@@ -1,14 +1,14 @@
 Package: zapret-gtk
-Version: 0.5.2-1
+Version: 0.5.3-1
 Architecture: amd64
 Maintainer: Taygun86
-Installed-Size: 1820
+Installed-Size: 1859
 Depends: curl, git, ipset, iptables, libadwaita-1-0, libc6, libgtk-4-1, policykit-1, procps
-Filename: ./zapret-gtk_0.5.2-1_amd64.deb
-Size: 678828
-MD5sum: 7f9ffefdc3ad7d0eabdb3b2c84799616
-SHA1: 9ae8aa94670024792766511725f10fdadd67950c
-SHA256: d0ba30f00fa64a10249e7af39bc72c8a8f8259d9e2c4f3d084362688efeeba4c
+Filename: ./zapret-gtk_0.5.3-1_amd64.deb
+Size: 686724
+MD5sum: 839c4dc3574a6ae05c03cf5fa89d7a0e
+SHA1: bbbcfcaa6e6b964002f03e0779ee52d67423d167
+SHA256: 11666715772114609da74e927d5b5e8f2374db4b9af0ef01a78ac79a9f5ccfda
 Section: utils
 Priority: optional
 Description: A GUI client for Zapret DPI Bypass
