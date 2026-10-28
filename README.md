@@ -1,8 +1,23 @@
 # Taygun86 Repository
 
-This repository hosts personal RPM and DEB packages.
+This repository hosts personal **RPM**, **DEB**, and **Flatpak** packages.
 
 ## Installation / Usage
+
+### Flatpak (All Linux Distributions)
+
+Run the following command to add the Flatpak repository:
+
+```bash
+flatpak remote-add --if-not-exists --no-gpg-verify taygun86 https://taygun86.github.io/taygun86-repo/flatpak
+```
+
+**Install Package:**
+```bash
+flatpak install taygun86 io.github.doors.Doors
+```
+
+---
 
 ### Debian / Ubuntu
 

@@ -1,0 +1,7 @@
+[Flatpak Repo]
+Title=Taygun86 Repository
+Url=https://taygun86.github.io/taygun86-repo/flatpak
+Homepage=https://github.com/Taygun86/taygun86-repo
+Comment=Taygun86 Flatpak Repository for Linux applications
+DefaultBranch=stable
+NoDeps=false

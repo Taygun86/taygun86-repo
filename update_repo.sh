@@ -6,6 +6,8 @@ NC='\033[0m'
 
 echo "Starting repository update..."
 
+touch .nojekyll
+
 if [ -d "rpm" ]; then
     echo -e "${GREEN}RPM folder found. Generating repo metadata...${NC}"
     if command -v createrepo_c &> /dev/null; then
@@ -44,6 +46,18 @@ if [ -d "deb" ]; then
     fi
 else
     echo "DEB folder not found, skipping."
+fi
+
+if [ -d "flatpak" ]; then
+    echo -e "${GREEN}Flatpak folder found. Updating OSTree summary and deltas...${NC}"
+    if command -v flatpak &> /dev/null; then
+        flatpak build-update-repo --title="Taygun86 Flatpak Repository" --generate-static-deltas flatpak
+        echo -e "${GREEN}Flatpak repo updated.${NC}"
+    else
+        echo -e "${RED}ERROR: 'flatpak' command not found.${NC}"
+    fi
+else
+    echo "Flatpak folder not found, skipping."
 fi
 
 echo "Process completed."
